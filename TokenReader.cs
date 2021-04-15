@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Tokenizer
 {
-    enum TokenType { ID, NUMBER, EQUAL, NONE}
     class TokenReader
     {
         public static List<string> getHashTag(string value)
