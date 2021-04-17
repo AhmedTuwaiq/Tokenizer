@@ -16,7 +16,7 @@ namespace Tokenizer
             for(int i = 0; i < value.Length; i++)
             {
                 hashtagProcessing:
-                if(value[i].Equals('#'))
+                if(value[i].Equals('#') && i != 0 && !char.IsLetterOrDigit(value[i - 1]))
                 {
                     while(i < value.Length)
                     {
@@ -64,7 +64,7 @@ namespace Tokenizer
             for (int i = 0; i < value.Length; i++)
             {
                 mentionProcessing:
-                if (value[i].Equals('@'))
+                if (value[i].Equals('@') && i != 0 && !char.IsLetterOrDigit(value[i - 1]))
                 {
                     while (i < value.Length)
                     {
